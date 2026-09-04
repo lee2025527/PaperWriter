@@ -1,0 +1,16 @@
+Figure:
+  CaptionPos: "Below"
+  FontSizePt: 10.5
+  FontName: "SimSun"
+  BoldID: True
+  Alignment: "Center"
+  MaxWidthCm: 14.5
+Table:
+  CaptionPos: "Above"
+  FontSizePt: 10.5
+  FontName: "SimSun"
+  BoldID: True
+  Alignment: "Center"
+Missing:
+  HighlightColor: "red"
+  PlaceholderText: "[缺失图表: {} (请检查资产目录)]"

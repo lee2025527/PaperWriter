@@ -1,0 +1,51 @@
+{
+  "page_setup": {
+    "margin_top_cm": 2.54,
+    "margin_bottom_cm": 2.54,
+    "margin_left_cm": 3.17,
+    "margin_right_cm": 3.17
+  },
+  "fonts": {
+    "cjk": "宋体",
+    "latin": "Times New Roman"
+  },
+  "default_style": {
+    "font_size_pt": 12,
+    "line_spacing": 1.5,
+    "alignment": "JUSTIFY",
+    "first_line_indent_chars": 2
+  },
+  "styles": {
+    "title_main": {
+      "font_size_pt": 16,
+      "bold": true,
+      "alignment": "CENTER"
+    },
+    "heading_1": {
+      "font_size_pt": 15,
+      "bold": true,
+      "alignment": "CENTER"
+    },
+    "heading_2": {
+      "font_size_pt": 14,
+      "bold": true,
+      "alignment": "LEFT"
+    },
+    "heading_3": {
+      "font_size_pt": 12,
+      "bold": true,
+      "alignment": "LEFT"
+    },
+    "list_item": {
+      "font_size_pt": 12,
+      "alignment": "LEFT",
+      "first_line_indent_chars": 0
+    },
+    "references": {
+      "font_size_pt": 10.5,
+      "alignment": "LEFT",
+      "line_spacing": 1.0,
+      "hanging_indent_chars": 2
+    }
+  }
+}

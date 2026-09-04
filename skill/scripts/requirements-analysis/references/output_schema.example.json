@@ -1,0 +1,139 @@
+{
+  "status": "partial",
+  "project_intent": {
+    "title": "示例论文题目",
+    "major": "示例专业",
+    "task_type": "本科论文",
+    "target_output": "完成可答辩论文初稿",
+    "deliverables": "论文正文、参考文献、附录",
+    "deadline": "2026-03-15"
+  },
+  "hard_constraints": {
+    "word_count": "12000字",
+    "plagiarism": "低于15%",
+    "aigc": "低于20%",
+    "deliverable_format": "docx",
+    "citation_format": "GB/T 7714-2015"
+  },
+  "requirements": {
+    "must_do": [
+      "按学校模板排版",
+      "包含实证分析"
+    ],
+    "forbidden": [
+      "不得编造数据"
+    ],
+    "bonus": [
+      "可补充行业案例"
+    ],
+    "special": [
+      "优先使用近五年文献"
+    ]
+  },
+  "scope": {
+    "research_object": "某行业中小企业",
+    "scenario": "数字化转型背景",
+    "research_scope": "经营绩效影响机制",
+    "time_region": "2020-2025，中国",
+    "data_source_limit": "公开数据库与年报"
+  },
+  "keywords": {
+    "zh": [
+      "数字化转型",
+      "经营绩效"
+    ],
+    "en": [
+      "digital transformation",
+      "firm performance"
+    ],
+    "synonyms": {
+      "zh": [
+        "企业数字化"
+      ],
+      "en": [
+        "enterprise digitalization"
+      ]
+    }
+  },
+  "materials": [
+    {
+      "path": "input/客户约稿表.docx",
+      "type": "document",
+      "parse_status": "parsed",
+      "snippet": "..."
+    }
+  ],
+  "evidence_map": {
+    "论文题目": [
+      "input/客户约稿表.docx"
+    ],
+    "中文关键词": [
+      "input/客户约稿表.docx"
+    ]
+  },
+  "conflicts": [
+    {
+      "field": "deadline",
+      "label": "交稿时间",
+      "values": [
+        {
+          "value": "2026-03-10",
+          "sources": [
+            "input/客户约稿表.docx"
+          ]
+        },
+        {
+          "value": "2026-03-15",
+          "sources": [
+            "input/补充要求.md"
+          ]
+        }
+      ]
+    }
+  ],
+  "missing_fields": [
+    "英文关键词"
+  ],
+  "legacy_fields": {
+    "论文题目": "示例论文题目",
+    "专业/方向": "示例专业",
+    "任务类型": "本科论文",
+    "字数": "12000字",
+    "查重/重复率要求": "低于15%",
+    "AIGC/AI 检测要求": "低于20%",
+    "交稿时间": "2026-03-15",
+    "交付物格式": "docx",
+    "格式/引用规范": "GB/T 7714-2015",
+    "现有材料（路径）": "input/客户约稿表.docx",
+    "研究对象": "某行业中小企业",
+    "场景/背景": "数字化转型背景",
+    "研究范围": "经营绩效影响机制",
+    "时间/地域范围": "2020-2025，中国",
+    "数据来源与限制": "公开数据库与年报",
+    "中文关键词": "数字化转型，经营绩效",
+    "英文关键词": "digital transformation, firm performance"
+  },
+  "metadata": {
+    "input_dir": "input",
+    "source_count": 1,
+    "text_source_count": 1
+  },
+  "field_labels": {
+    "title": "论文题目",
+    "major": "专业/方向",
+    "task_type": "任务类型",
+    "target_output": "目标产出",
+    "deliverables": "交付物",
+    "word_count": "字数",
+    "plagiarism": "查重/重复率要求",
+    "aigc": "AIGC/AI 检测要求",
+    "deadline": "交稿时间",
+    "deliverable_format": "交付物格式",
+    "citation_format": "格式/引用规范",
+    "research_object": "研究对象",
+    "scenario": "场景/背景",
+    "research_scope": "研究范围",
+    "time_region": "时间/地域范围",
+    "data_limit": "数据来源与限制"
+  }
+}

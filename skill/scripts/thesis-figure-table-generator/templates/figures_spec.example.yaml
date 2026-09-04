@@ -1,0 +1,105 @@
+# 图表规格清单示例（与 R6181 风格一致，可作模板）
+output_dir: "output/work/正文插图与表格"
+data_root: "."
+
+items:
+  - id: 图3-1
+    title: 上传检测结果展示下载流程
+    type: flowchart
+    data_source: 案例与数据文档 2.3 功能与界面
+    options:
+      direction: horizontal
+      nodes:
+        - label: 上传图像
+          sublabel: Upload Image
+          color: "#4A90E2"
+        - label: 检测推理
+          sublabel: Detection
+          color: "#50C878"
+        - label: 结果展示
+          sublabel: Display
+          color: "#FF8C42"
+        - label: 下载结果
+          sublabel: Download
+          color: "#9B59B6"
+
+  - id: 图4-1
+    title: 系统总体架构图
+    type: architecture
+    data_source: 案例与数据文档 2.5 技术栈与模块
+    options:
+      layers:
+        - title: 前端层
+          subtitle: Presentation Layer
+          color: "#3498DB"
+          modules: ["Streamlit 界面", "模式选择", "上传与参数", "结果展示"]
+        - title: 后端/服务层
+          subtitle: Service Layer
+          color: "#2ECC71"
+          modules: ["请求转发", "结果封装", "图像解码"]
+        - title: 检测层
+          subtitle: Detection Layer
+          color: "#E74C3C"
+          modules: ["YOLOv8 加载", "推理", "标注图生成"]
+
+  - id: 图5-1
+    title: 目标检测页面布局示意
+    type: layout_sketch
+    data_source: 案例与数据文档 2.3 功能与界面
+    options:
+      style: web_ui
+      regions:
+        - name: 标题栏
+          color: "#34495E"
+        - name: 侧边栏
+          color: "#2C3E50"
+        - name: 主区
+          color: "#FFFFFF"
+
+  - id: 图6-1
+    title: 系统运行界面截图
+    type: screenshot_placeholder
+    data_source: 第六章 6.3 节
+    manual: true
+    options:
+      instructions: 请运行系统后在浏览器中截取目标检测页完整界面。
+
+  - id: 图7-1
+    title: 验证集混淆矩阵
+    type: confusion_matrix
+    data_source: results.csv 第15轮指标推算
+    data_path: system/runs/detect/experiments/train/melanoma/results.csv
+    options:
+      labels: ["良性", "恶性"]
+      # 若 data_path 存在可读矩阵则优先读取；否则可用 matrix 写死
+      matrix: [[24, 28], [17, 35]]
+
+  - id: 图7-2
+    title: 训练过程曲线（loss / mAP）
+    type: line_chart
+    data_source: results.csv
+    data_path: system/runs/detect/experiments/train/melanoma/results.csv
+    options:
+      x_key: epoch
+      series:
+        - name: Total Loss
+          expr: "train/box_loss + train/cls_loss + train/dfl_loss"
+        - name: mAP50
+          key: "metrics/mAP50(B)"
+      y_label: Loss
+      y2_label: mAP50
+
+  - id: 表7-1
+    title: 系统测试用例与执行结果
+    type: table
+    data_source: 案例与数据文档 2.4 测试用例
+    options:
+      headers: ["用例编号", "测试项", "操作步骤简要说明", "预期结果", "实际结果", "通过"]
+      rows:
+        - ["TC-01", "图像上传与预览", "在目标检测页上传 JPG/PNG 图像", "侧边栏与主区显示原图", "侧边栏展示小图，主区展示原图", "是"]
+        - ["TC-02", "智能检测与结果展示", "上传图像后触发检测（自动或点击）", "主区显示带检测框的结果图，类别为良性或恶性", "主区双列显示原图与标注图，类别正确", "是"]
+        - ["TC-03", "检测结果明细", "展开「检测结果明细」区域", "列出每个目标的类别（中文）与置信度", "明细中显示良性/恶性及置信度百分比", "是"]
+        - ["TC-04", "结果图下载", "点击「下载结果图」", "下载 PNG 格式标注图", "可下载 PNG 文件", "是"]
+        - ["TC-05", "置信度调节", "调节侧边栏置信度滑块后重新检测", "检测结果随阈值变化，低置信度框被过滤", "阈值调高后检测框数量减少", "是"]
+        - ["TC-06", "未放置模型", "未放置 best.pt 即启动并进入目标检测", "应用提示「未找到模型文件」及训练说明", "出现错误提示及操作建议", "是"]
+        - ["TC-07", "非图像上传", "上传非图像文件（如 .txt）", "得到友好错误提示", "前端限制类型或后端提示格式错误", "是"]

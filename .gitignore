@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# 用户项目运行产物(仓库只分发技能本体)
+input/*
+!input/.gitkeep
+output/*
+!output/.gitkeep
+work/
+.env
+
+# IDE / 系统
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# 临时文件
+*.log
+*.tmp
+.cache/

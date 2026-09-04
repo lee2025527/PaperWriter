@@ -1,0 +1,2 @@
+# Reference Citation Optimizer skill (GB/T 7714 顺序编码制)
+python-docx>=0.8.11
