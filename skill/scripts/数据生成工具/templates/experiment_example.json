@@ -1,0 +1,42 @@
+{
+  "project": {
+    "title": "心理护理干预效果研究",
+    "domain": "护理学",
+    "data_allowed": true,
+    "data_required": true
+  },
+  "data_spec": {
+    "type": "experiment",
+    "groups": [
+      {"name": "control", "n": 60},
+      {"name": "intervention", "n": 60}
+    ]
+  },
+  "variables": [
+    {
+      "name": "SAS",
+      "type": "scale",
+      "min": 20,
+      "max": 80,
+      "distribution": "normal",
+      "mean": 54,
+      "std": 9
+    },
+    {
+      "name": "QoL",
+      "type": "scale",
+      "min": 0,
+      "max": 100,
+      "distribution": "normal",
+      "mean": 62,
+      "std": 12
+    }
+  ],
+  "constraints": {
+    "missing_rate": 0.02,
+    "direction": [
+      "intervention < control on SAS",
+      "intervention > control on QoL"
+    ]
+  }
+}

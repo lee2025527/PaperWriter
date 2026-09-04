@@ -1,0 +1,15 @@
+{
+  "project": {
+    "title": "心理护理体验访谈",
+    "domain": "护理学",
+    "data_allowed": true,
+    "data_required": true
+  },
+  "data_spec": {
+    "type": "interview"
+  },
+  "interview_template": {
+    "themes": ["疾病认知", "情绪体验", "护理体验", "应对方式"],
+    "quotes_per_theme": 2
+  }
+}

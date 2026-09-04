@@ -1,0 +1,42 @@
+{
+  "project": {
+    "title": "<论文题目>",
+    "domain": "<学科/领域>",
+    "data_allowed": true,
+    "data_required": true
+  },
+  "data_spec": {
+    "type": "survey",
+    "sample_size": 200,
+    "groups": [
+      {"name": "control", "n": 100},
+      {"name": "intervention", "n": 100}
+    ],
+    "timepoints": ["pre", "post"]
+  },
+  "variables": [
+    {
+      "name": "SAS",
+      "type": "scale",
+      "min": 20,
+      "max": 80,
+      "distribution": "normal",
+      "mean": 50,
+      "std": 10
+    }
+  ],
+  "constraints": {
+    "missing_rate": 0.02,
+    "direction": [
+      "intervention < control on SAS"
+    ]
+  },
+  "case_template": {
+    "fields": ["基本信息", "主要症状", "心理状态", "护理干预", "变化与结果"],
+    "cases": 3
+  },
+  "interview_template": {
+    "themes": ["疾病认知", "情绪体验", "护理体验", "应对方式"],
+    "quotes_per_theme": 2
+  }
+}

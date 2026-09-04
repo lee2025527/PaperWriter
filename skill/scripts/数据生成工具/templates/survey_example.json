@@ -1,0 +1,35 @@
+{
+  "project": {
+    "title": "慢性胃炎患者的心理护理研究",
+    "domain": "护理学",
+    "data_allowed": true,
+    "data_required": true
+  },
+  "data_spec": {
+    "type": "survey",
+    "sample_size": 150
+  },
+  "variables": [
+    {
+      "name": "SAS",
+      "type": "scale",
+      "min": 20,
+      "max": 80,
+      "distribution": "normal",
+      "mean": 52,
+      "std": 9
+    },
+    {
+      "name": "SDS",
+      "type": "scale",
+      "min": 20,
+      "max": 80,
+      "distribution": "normal",
+      "mean": 50,
+      "std": 10
+    }
+  ],
+  "constraints": {
+    "missing_rate": 0.03
+  }
+}

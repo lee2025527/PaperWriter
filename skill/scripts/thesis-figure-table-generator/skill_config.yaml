@@ -1,0 +1,14 @@
+output_dir: output/deliver/论文图表
+placeholder_regex:
+  figure: '> \[\s*(?:插入)?图\s*(\d+(?:-\d+)?)[:：]?\s*(.*?)\s*\]'
+  table: '> \[\s*(?:插入)?表\s*(\d+(?:-\d+)?)[:：]?\s*(.*?)\s*\]'
+style:
+  fonts:
+  - Arial Unicode MS
+  - PingFang SC
+  - Heiti SC
+  - SimHei
+  figure_dpi: 300
+  table_style: Table Grid
+  table_font: 宋体
+  table_font_size_pt: 10.5

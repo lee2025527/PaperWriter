@@ -1,0 +1,87 @@
+fields:
+  title:
+    label: "论文题目"
+    patterns:
+      - '(?:论文题目|课题名称|项目题目|题目)\s*[:：]\s*([^\n]+)'
+  major:
+    label: "专业/方向"
+    patterns:
+      - '(?:专业/方向|专业|研究方向)\s*[:：]\s*([^\n]+)'
+  task_type:
+    label: "任务类型"
+    patterns:
+      - '(?:任务类型|项目类型|论文类型|需求类型)\s*[:：]\s*([^\n]+)'
+  target_output:
+    label: "目标产出"
+    patterns:
+      - '(?:目标产出|产出目标|最终产出)\s*[:：]\s*([^\n]+)'
+  deliverables:
+    label: "交付物"
+    patterns:
+      - '(?:交付物|交付内容|成果清单|交付清单)\s*[:：]\s*([^\n]+)'
+  word_count:
+    label: "字数"
+    patterns:
+      - '(?:字数(?:要求)?|总字数|篇幅)\s*[:：]?\s*([^\n]{1,60})'
+  plagiarism:
+    label: "查重/重复率要求"
+    patterns:
+      - '(?:查重(?:率)?要求|重复率要求|查重红线)\s*[:：]\s*([^\n]+)'
+  aigc:
+    label: "AIGC/AI 检测要求"
+    patterns:
+      - '(?:AIGC(?:/AI)?(?:\s*检测)?要求|AI检测要求|AIGC要求)\s*[:：]\s*([^\n]+)'
+  deadline:
+    label: "交稿时间"
+    patterns:
+      - '(?:交稿时间|截止时间|交付时间|完成时间)\s*[:：]\s*([^\n]+)'
+  deliverable_format:
+    label: "交付物格式"
+    patterns:
+      - '(?:交付物格式|交付格式|输出格式|成果格式)\s*[:：]\s*([^\n]+)'
+  citation_format:
+    label: "格式/引用规范"
+    patterns:
+      - '(?:格式/引用规范|引用规范|参考文献格式|格式要求)\s*[:：]\s*([^\n]+)'
+  research_object:
+    label: "研究对象"
+    patterns:
+      - '(?:研究对象)\s*[:：]\s*([^\n]+)'
+  scenario:
+    label: "场景/背景"
+    patterns:
+      - '(?:场景/背景|研究背景|应用场景)\s*[:：]\s*([^\n]+)'
+  research_scope:
+    label: "研究范围"
+    patterns:
+      - '(?:研究范围)\s*[:：]\s*([^\n]+)'
+  time_region:
+    label: "时间/地域范围"
+    patterns:
+      - '(?:时间/地域范围|时间范围|地域范围)\s*[:：]\s*([^\n]+)'
+  data_limit:
+    label: "数据来源与限制"
+    patterns:
+      - '(?:数据来源与限制|数据来源|数据限制)\s*[:：]\s*([^\n]+)'
+
+list_markers:
+  must_do:
+    - "必须做"
+    - "必须"
+    - "硬性要求"
+    - "关键要求"
+  forbidden:
+    - "禁止"
+    - "不允许"
+    - "不能"
+    - "禁做"
+  bonus:
+    - "可选加分项"
+    - "可选"
+    - "建议"
+    - "加分"
+  special:
+    - "特殊要求"
+    - "补充要求"
+    - "特别说明"
+    - "备注"

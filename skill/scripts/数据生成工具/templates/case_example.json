@@ -1,0 +1,16 @@
+{
+  "project": {
+    "title": "慢性胃炎患者心理护理案例分析",
+    "domain": "护理学",
+    "data_allowed": true,
+    "data_required": true
+  },
+  "data_spec": {
+    "type": "case",
+    "sample_size": 3
+  },
+  "case_template": {
+    "fields": ["基本信息", "主要症状", "心理状态", "护理干预", "变化与结果"],
+    "cases": 3
+  }
+}
