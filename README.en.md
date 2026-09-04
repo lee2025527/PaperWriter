@@ -71,9 +71,12 @@ pip install -r requirements.txt
 **2. Configure (once, ~3 min)**
 
 ```bash
-cp .env.example my-thesis/.env
-# edit .env: SERPAPI_KEY (free signup at https://serpapi.com, 100 searches/month)
-python3 skill/scripts/selfcheck.py   # must be all green
+mkdir my-thesis && cp .env.example my-thesis/.env
+# edit my-thesis/.env: SERPAPI_KEY (free signup at https://serpapi.com, 100 searches/month)
+cd my-thesis
+# self-check — run inside the project dir; pick the path where the skill was installed:
+python3 ~/.claude/skills/paper-writer/scripts/selfcheck.py
+python3 ~/.agents/skills/paper-writer/scripts/selfcheck.py
 ```
 
 SERPAPI_KEY is **required**: even with your own reading list, the pipeline auto-tops-up when the list falls short.
@@ -119,7 +122,7 @@ No install needed, alternative: clone the repo and point your agent at `skill/SK
 
 ## FAQ
 
-- **Can I use it without a SerpAPI key?** The key is required (lists get topped up automatically). Free tier: 100 searches/month, enough for one thesis. Fully offline is not a supported default path.
+- **Can I use it without a SerpAPI key?** No — the key is a hard requirement of the environment self-check, even with a complete reading list (lists get topped up automatically when short). Free tier: 100 searches/month, enough for one thesis. Fully offline setups are not supported.
 - **Where does the data come from? Is it made up?** Three tiers: your real data first; real system exports for system-first projects; otherwise plausible drafts — **the thesis body stays clean with zero markers**, and the delivery report carries a to-verify data list telling you exactly which values are generated and how to replace them. Never disguised as real.
 - **Will it pass AI detection / plagiarism checks?** No promises — built-in anti-AI-tone rules reduce risk only.
 - **English theses?** The main line targets Chinese theses (with EN/CN abstracts). EN translation & AI-rate reduction are on the roadmap (`skill/references/optional-extras.md`).
