@@ -50,7 +50,7 @@ Workflow B's core rule, hardened by real practice: **every screenshot, test resu
 
 | Limit | Detail |
 |---|---|
-| No fabricated references, data, or results | Data gaps become drafts explicitly marked `[待核验]` (to verify), or the pipeline stops and asks |
+| No fabricated references, data, or results | Data gaps become plausible drafts; the delivery report includes a **to-verify data list** (chapter/table, current value, suggested replacement) while the thesis body itself stays clean — or the pipeline stops and asks |
 | Does not replace real research | No experiments / fieldwork / clinical data collection; it only organizes data you already have |
 | No plagiarism/AI-detector guarantees | Built-in anti-AI-tone writing rules reduce risk; outcomes vary by detector |
 | Doctoral-level original theory | Can write to standard, but the novelty itself must come from the author |
@@ -90,7 +90,7 @@ claude                # or your terminal agent
 > 写论文
 ```
 
-Then it runs itself: brief confirmation (the **only** mandatory human checkpoint) → literature → review → outline → data → batch writing with per-batch verification → merge → citation alignment → length check → figures → Word draft → delivery summary (deliverables, word-count report, `[待核验]` items, polish advice).
+Then it runs itself: brief confirmation (the **only** mandatory human checkpoint) → literature → review → outline → data → batch writing with per-batch verification → merge → citation alignment → length check → figures → Word draft → delivery summary (deliverables, word-count report, to-verify data list, polish advice).
 
 Interrupted? Say "**继续**" (continue) and it resumes from the breakpoint. The pipeline only stops to ask you in three cases: **literature still insufficient after re-search, repeated batch failures, or the system cannot actually run.**
 
@@ -120,7 +120,7 @@ No install needed, alternative: clone the repo and point your agent at `skill/SK
 ## FAQ
 
 - **Can I use it without a SerpAPI key?** The key is required (lists get topped up automatically). Free tier: 100 searches/month, enough for one thesis. Fully offline is not a supported default path.
-- **Where does the data come from? Is it made up?** Three tiers: your real data first; real system exports for system-first projects; otherwise plausible drafts **explicitly marked `[待核验]`** and summarized in the delivery report. Never disguised as real.
+- **Where does the data come from? Is it made up?** Three tiers: your real data first; real system exports for system-first projects; otherwise plausible drafts — **the thesis body stays clean with zero markers**, and the delivery report carries a to-verify data list telling you exactly which values are generated and how to replace them. Never disguised as real.
 - **Will it pass AI detection / plagiarism checks?** No promises — built-in anti-AI-tone rules reduce risk only.
 - **English theses?** The main line targets Chinese theses (with EN/CN abstracts). EN translation & AI-rate reduction are on the roadmap (`skill/references/optional-extras.md`).
 
