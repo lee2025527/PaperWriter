@@ -62,7 +62,7 @@ Workflow B's core rule, hardened by real practice: **every screenshot, test resu
 **1. Install (once)**
 
 ```bash
-git clone https://github.com/<owner>/PaperWriter.git
+git clone https://github.com/lee2025527/PaperWriter.git
 cd PaperWriter
 ./install.sh          # auto-detects Claude Code / ZCode and installs the skill
 pip install -r requirements.txt

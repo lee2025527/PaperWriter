@@ -73,7 +73,7 @@ flowchart LR
 ### 1. 安装技能(一次性)
 
 ```bash
-git clone https://github.com/<owner>/PaperWriter.git
+git clone https://github.com/lee2025527/PaperWriter.git
 cd PaperWriter
 ./install.sh          # 自动检测 Claude Code / ZCode 并安装
 pip install -r requirements.txt
