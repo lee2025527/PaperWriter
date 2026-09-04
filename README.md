@@ -82,10 +82,13 @@ pip install -r requirements.txt
 ### 2. 配置环境(一次性,约 3 分钟)
 
 ```bash
-cp .env.example 我的论文/.env
-# 编辑 .env,填入 SERPAPI_KEY(免费注册 https://serpapi.com,每月100次搜索)
+mkdir 我的论文 && cp .env.example 我的论文/.env
+# 编辑 我的论文/.env,填入 SERPAPI_KEY(免费注册 https://serpapi.com,每月100次搜索)
 # 可选:填 OPENALEX_EMAIL 提高文献摘要增强速度
-python3 skill/scripts/selfcheck.py   # 自检,全绿即配置完成
+cd 我的论文
+# 自检——在项目目录执行,路径按技能安装位置二选一:
+python3 ~/.claude/skills/paper-writer/scripts/selfcheck.py
+python3 ~/.agents/skills/paper-writer/scripts/selfcheck.py
 ```
 
 **SERPAPI_KEY 是必配项**:即使你自带文献清单,清单不足时流水线仍会自动补检——迟早要用,不如一开始配好。(没有网络检索环境?见 FAQ。)
@@ -146,7 +149,7 @@ PaperWriter/
 ## 六、FAQ
 
 **Q: 没有 SerpAPI key 能用吗?**
-A:key 是必配项(清单不足时会自动补检)。注册免费,每月 100 次搜索足够一篇论文。完全离线场景:在 `input/` 放足量的文献清单并在需求单确认"不做补检",可跳过检索,但此路径不在默认支持范围。
+A:key 是必配项,环境自检为硬校验(即使自带足量文献清单也要求配置——清单不足时会自动补检)。注册免费,每月 100 次搜索足够一篇论文。完全离线场景不在支持范围。
 
 **Q: 论文里的数据从哪来?会不会是编的?**
 A:三层:① 你提供的真实数据优先;② 系统先行项目用真实系统导出数据;③ 都没有时生成符合领域规律的草案——**论文正文不带任何标记、干净成文**,同时交付摘要里附"待核实数据清单",逐条告诉你哪章哪表的数据是生成的、建议怎么替换,绝不伪装成真实数据。
